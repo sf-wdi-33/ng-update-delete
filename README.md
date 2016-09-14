@@ -10,8 +10,8 @@ Market: SF
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
-
-
+![CRUD](http://2.bp.blogspot.com/-frXMwdxsUyg/VpwZAFmBcJI/AAAAAAAABK4/G6sBPW0qhg8/s1600/CRUD.png)
+Angular is built to help develop full CRUD apps. Update and delete are the more complex half of CRUD that require reflection on the DOM after it has been loaded. Practice is important to help you feel comfortable doing this work on your own.
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
@@ -162,6 +162,14 @@ Market: SF
 
 </details>
 
-### Exercises
+### Independent Practice
 
 [Sprint 3 of tunely-angular](https://github.com/sf-wdi-31/tunely-angular/blob/master/docs/sprint3.md) - Don't forget to checkout `solutions_sprint_2` and follow the [branching instructions](https://github.com/sf-wdi-31/tunely-angular/blob/master/docs/starting_with_a_branch.md#subsequent-sprints);
+
+## Closing Thoughts
+- Check in with yourself: Could you explain each piece of the `$http` service syntax? Could you write out the syntax without looking at a previous example?
+- At this point in your practice, you should feel comfortable with the general idea of making calls from the client side to the server side, independent of the syntax or framework used. If you know the pieces required to make HTTP requests, you will quickly adopt new syntax from other frameworks you'll learn in the future.
+- Looking forward: you will be using Angular to build a CRUD application this weekend.
+
+## Additional Resources
+- [External Resource](#)
