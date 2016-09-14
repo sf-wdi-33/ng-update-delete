@@ -9,8 +9,10 @@ Market: SF
 
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
-*This workshop is important because:*
 ![CRUD](http://2.bp.blogspot.com/-frXMwdxsUyg/VpwZAFmBcJI/AAAAAAAABK4/G6sBPW0qhg8/s1600/CRUD.png)
+
+*This workshop is important because:*
+
 Angular is built to help develop full CRUD apps. Update and delete are the more complex half of CRUD that require reflection on the DOM after it has been loaded. Practice is important to help you feel comfortable doing this work on your own.
 
 ### What are the objectives?
