@@ -1,13 +1,31 @@
+<!--
+Creator: Team, edits by Cory Fauver
+Market: SF
+-->
+
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# Angular`$http` Update and Delete
+
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
 
 
-<h1 id="ng-UD">Angular `$http` Update and Delete</h1>
 
-| Objectives |
-| :--- |
-| *Students will be able to:* |
-| Make requests to update and delete data in the DB using `$http`. |
-| Successfully update and delete data in the view once we receive a success message from the DB. |
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
 
+- Make requests to update and delete data in the DB using `$http`.
+- Successfully update and delete data in the view once we receive a success message from the DB.
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+- make update and delete requests using jQuery's `$.ajax()` function.
+- using jQuery to adjust the DOM to reflect data returned from the server.
 
 
 ### Update a database using `$http`
