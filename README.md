@@ -7,6 +7,28 @@ Market: SF
 
 # Angular`$http` Update and Delete
 
+### Warmup
+
+Without looking at any outside resources, write out the syntax for an Angular `$http` GET request on the board in pairs.
+
+<details>
+  <summary>
+  </summary>
+  ```javascript
+  $http({
+    method: 'GET',
+    url: 'http://www.jonsnow-portfolio.com/api/projects'
+  }).then(successCallback, errorCallback);
+
+  function successCallback(response) {
+    console.log('response for all projects:', response);
+  }
+  function errorCallback(error) {
+    console.log('There was an error getting the data', error);
+  }
+  ```
+</details>
+
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 ![CRUD](http://2.bp.blogspot.com/-frXMwdxsUyg/VpwZAFmBcJI/AAAAAAAABK4/G6sBPW0qhg8/s1600/CRUD.png)
@@ -164,6 +186,54 @@ Angular is built to help develop full CRUD apps. Update and delete are the more 
 
 </details>
 
+### The hard part
+##### "If a successful response comes back, update the data in your view."
+
+Why was this hard when we were using jQuery and Handlebars on the client side?
+
+This step is quite a bit easier in Angular. We can simply change the data that's bound to the view.
+
+<details>
+  <summary>`.then` for delete.</summary>
+```javascript
+vm.deleteBook = function(book){
+  $http({
+    method: 'DELETE',
+    url: '/api/books/' + book._id,
+  }).then(function successCallback(deletedBookJson) {
+    var index = vm.books.indexOf(deletedBookJson);
+    vm.books.splice(index, 1);
+  }, function errorCallback(response) {
+    console.log('There was an error deleting the data', response);
+  });
+}
+```
+</details>
+
+<details>
+  <summary>`.then` for update.</summary>
+```javascript
+vm.updateBook = function(book){
+  $http({
+    method: 'PUT',
+    url: '/api/books/' + book._id,
+    data: {
+      title: book.title,
+      author: book.author,
+      characters: book.characters
+    },
+  }).then(function successCallback(updatedBookJson) {
+    var index = vm.books.indexOf(book);
+    vm.books.splice(index, 1, updatedBookJson);
+    // any hiding / showing that needs to occur
+  }, function errorCallback(response) {
+    console.log('There was an error deleting the data', response);
+  });
+}
+```
+</details>
+
+
 ### Independent Practice
 
 [Sprint 3 of tunely-angular](https://github.com/sf-wdi-31/tunely-angular/blob/master/docs/sprint3.md) - Don't forget to checkout `solutions_sprint_2` and follow the [branching instructions](https://github.com/sf-wdi-31/tunely-angular/blob/master/docs/starting_with_a_branch.md#subsequent-sprints);
@@ -174,4 +244,4 @@ Angular is built to help develop full CRUD apps. Update and delete are the more 
 - Looking forward: you will be using Angular to build a CRUD application this weekend.
 
 ## Additional Resources
-- [External Resource](#)
+- [`$http` documentation](https://docs.angularjs.org/api/ng/service/$http)
