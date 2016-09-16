@@ -201,7 +201,7 @@ vm.deleteBook = function(book){
     method: 'DELETE',
     url: '/api/books/' + book._id,
   }).then(function successCallback(deletedBookJson) {
-    var index = vm.books.indexOf(deletedBookJson);
+    var index = vm.books.indexOf(book);
     vm.books.splice(index, 1);
   }, function errorCallback(response) {
     console.log('There was an error deleting the data', response);
