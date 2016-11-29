@@ -130,7 +130,7 @@ Angular is built to help develop full CRUD apps. Update and delete are the more 
 
 <details>
   <summary>
-  **Pseudocode an update function on the client side**
+  **Pseudocode a delete function on the client side**
   </summary>
   1. Gather the proper resources to send the request
     1. Get the proper endpoint on the API to update the proper resource. Make sure you know the way you are supposed to identify a specific item to delete (by id? by name?). For example, `/api/albums/:id`.
