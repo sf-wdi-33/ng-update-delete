@@ -128,6 +128,8 @@ Angular is built to help develop full CRUD apps. Update and delete are the more 
 
 ### Delete an entry in the database using `$http`
 
+![Oscar](http://i.giphy.com/dth289r1H5wMU.gif)
+
 <details>
   <summary>
   **Pseudocode a delete function on the client side**
